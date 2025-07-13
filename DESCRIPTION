@@ -1,0 +1,19 @@
+Package: uwtheme
+Type: Package
+Title: Custom UW-Madison Shiny Theme Package
+Version: 0.1.0
+Authors@R: person("Maria", "Oros", email = "maria.oros@wisc.edu",
+                  role = c("aut", "cre"))
+Description: A custom theme package for Shiny applications with UW-Madison styling with CSS and UI components.
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.5.0)
+Imports:
+    shiny (>= 1.0.0),
+    htmltools,
+    sass
+Suggests:
+    shinydashboard,
+    DT,
+    plotly

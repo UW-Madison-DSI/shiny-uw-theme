@@ -1,0 +1,32 @@
+---
+title: "Using Custom Shiny Theme"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using Custom Shiny Theme}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Basic Usage
+
+```{r, eval=FALSE}
+library(shiny)
+library(myShinyTheme)
+
+ui <- fluidPage(
+  use_custom_theme(primary_color = "#e74c3c"),
+  titlePanel("My Themed App"),
+  
+  fluidRow(
+    themed_card("Card 1", "This is content", width = 6),
+    themed_card("Card 2", "More content", width = 6)
+  ),
+  
+  themed_button("btn1", "Click me!", style = "primary")
+)
+
+server <- function(input, output) {
+  # server logic
+}
+
+shinyApp(ui = ui, server = server)
