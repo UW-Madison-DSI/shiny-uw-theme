@@ -32,3 +32,6 @@ themed_card <- function(title, content, width = 6) {
     )
   )
 }
+
+
+#https://github.com/rstudio/shinythemes/blob/main/README.md example
